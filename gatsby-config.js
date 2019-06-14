@@ -17,7 +17,7 @@ module.exports = {
       resolve: `gatsby-source-strapi`,
       options: {
         apiURL: process.env.DEPLOY_URL
-          ? "https://dashboard.heroku.com/apps/thawing-beyond-58437"
+          ? process.env.DEPLOY_URL
           : "http://localhost:1337",
         contentTypes: [`article`, `user`],
         queryLimit: 1000,
